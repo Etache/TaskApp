@@ -1,20 +1,14 @@
 package com.example.taskapp_m4.ui.profile
 
-import android.R.attr.previewImage
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.setFragmentResultListener
-import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
-import com.example.taskapp_m4.R
 import com.example.taskapp_m4.databinding.FragmentProfileBinding
-import com.example.taskapp_m4.ui.home.HomeFragment
 
 
 class ProfileFragment : Fragment() {
