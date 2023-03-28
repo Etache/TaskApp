@@ -1,4 +1,4 @@
-package com.example.taskapp_m4.ui.profile.onBoard
+package com.example.taskapp_m4.ui.onBoard
 import java.io.Serializable
 
 data class BoardModel(
