@@ -21,3 +21,4 @@ class Preferences(context: Context) {
         return sharedPreference.getString("editText", null)
     }
 }
+//аааааа test
