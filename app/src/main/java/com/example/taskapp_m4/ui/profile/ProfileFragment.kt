@@ -9,6 +9,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.example.taskapp_m4.databinding.FragmentProfileBinding
+import com.example.taskapp_m4.utils.Preferences
 
 
 class ProfileFragment : Fragment() {
@@ -45,11 +46,15 @@ class ProfileFragment : Fragment() {
         binding.btnSave.setOnClickListener {
             val usname = binding.etUsername.text.toString()
             binding.tvUsername.setText(usname)
-        }
+            Preferences(requireContext()).setEditTextUsername(usname)
 
+            binding.etUsername.setText("")
+        }
     }
 
     private fun initViews() {
-
+        val editTextUsername = Preferences(requireContext()).getEditTextValue()
+        binding.etUsername.setText(editTextUsername)
+        binding.tvUsername.text = editTextUsername
     }
 }

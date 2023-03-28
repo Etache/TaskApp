@@ -1,4 +1,4 @@
-package com.example.taskapp_m4.ui.onBoard
+package com.example.taskapp_m4.ui.profile.onBoard
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

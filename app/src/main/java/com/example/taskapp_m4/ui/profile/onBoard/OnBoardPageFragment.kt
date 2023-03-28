@@ -1,5 +1,6 @@
-package com.example.taskapp_m4.ui.onBoard
+package com.example.taskapp_m4.ui.profile.onBoard
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.example.taskapp_m4.R
 import com.example.taskapp_m4.databinding.FragmentOnBoardPageBinding
+import com.example.taskapp_m4.utils.Preferences
 
 class OnBoardPageFragment(
     private var onNextClick: () -> Unit,
@@ -30,10 +32,13 @@ class OnBoardPageFragment(
     private fun initListeners() {
         binding.btnStart.setOnClickListener {
             findNavController().navigate(R.id.navigation_home)
+            Preferences(requireContext()).setBoardingShowed(true)
         }
+
         binding.btnNext.setOnClickListener {
             onNextClick.invoke()
         }
+
         binding.btnSkip.setOnClickListener {
             onSkipClick.invoke()
         }
