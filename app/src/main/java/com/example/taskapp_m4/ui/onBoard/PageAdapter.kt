@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.taskapp_m4.ui.onBoard
 
 import androidx.core.os.bundleOf
@@ -6,6 +8,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.example.taskapp_m4.R
 
+@Suppress("DEPRECATION")
 class PageAdapter(fm: FragmentManager,
                   private var onNextClick: () -> Unit,
                   private var onSkipClick: () -> Unit

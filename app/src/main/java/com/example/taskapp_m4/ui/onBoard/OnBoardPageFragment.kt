@@ -1,6 +1,5 @@
 package com.example.taskapp_m4.ui.onBoard
 
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -22,7 +21,7 @@ class OnBoardPageFragment(
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentOnBoardPageBinding.inflate(inflater, container, false)
         initViews()
         initListeners()
@@ -31,7 +30,7 @@ class OnBoardPageFragment(
 
     private fun initListeners() {
         binding.btnStart.setOnClickListener {
-            findNavController().navigate(R.id.navigation_home)
+            findNavController().navigateUp()
             Preferences(requireContext()).setBoardingShowed(true)
         }
 
@@ -45,7 +44,7 @@ class OnBoardPageFragment(
     }
 
     private fun initViews() {
-        val data = arguments?.getSerializable("onBoard") as BoardModel
+        @Suppress("DEPRECATION") val data = arguments?.getSerializable("onBoard") as BoardModel
         binding.imgBoard.setImageResource(data.img)
         binding.tvTitleBoard.text = data.title
         binding.tvDescBoard.text = data.description

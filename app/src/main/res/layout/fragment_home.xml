@@ -10,11 +10,10 @@
         android:id="@+id/fab_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:src="@drawable/baseline_edit_note"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="40px"
-        android:src="@drawable/baseline_edit_note"/>
-
+        app:layout_constraintEnd_toEndOf="parent" />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_home"
         android:layout_width="match_parent"

@@ -14,6 +14,11 @@ class TaskAdapter: RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
         taskList.add(0, taskModel)
     }
 
+    fun getAllTask(list: List<TaskModel>) {
+        taskList.clear()
+        taskList.addAll(list)
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
         return TaskViewHolder(
             TaskItemBinding.inflate(
